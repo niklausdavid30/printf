@@ -25,7 +25,7 @@ typedef struct functions
 /* Main Function */
 int _printf(const char *format, ...);
 int parser(const char *format, PrintFunction printFunctions[], va_list argms);
-int printChar(va_list argms);
+int print_char(va_list argms);
 
 
 /* Help Functions */
