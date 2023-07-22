@@ -7,7 +7,7 @@
 
 int print_char(va_list argms)
 {
-  char value = va_arg(listin, int);
+  char value = va_arg(argms, int);
   _putchar(value);
   return (1);
 }
