@@ -25,3 +25,14 @@ int print_string(va_list argms)
       _putchar(s[i]);
   return (i);
 }
+
+/**
+* print_percent - Prints percent
+* @argms: Variadic list of arguments
+*/
+
+int print_percent(va_list argms)
+{
+	_putchar('%');
+	return (1);
+}
