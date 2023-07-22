@@ -7,8 +7,8 @@ format is a character string. The format string is composed of zero or more dire
 c
 s
 %
-You don’t have to reproduce the buffer handling of the C library printf function
-You don’t have to handle the flag characters
-You don’t have to handle field width
-You don’t have to handle precision
-You don’t have to handle the length modifiers
+You don’t have to reproduce the buffer handling of the C library printf function.
+You don’t have to handle the flag characters.
+You don’t have to handle field width.
+You don’t have to handle precision.
+You don’t have to handle the length modifiers.
