@@ -13,3 +13,11 @@ int print_integer(va_list args)
 	return (n);
 
 }
+
+int print_unsigned(va_list args)
+{
+	int n;
+
+	n = print_unsigned_number(args);
+	return (n);
+}
