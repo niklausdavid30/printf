@@ -58,3 +58,30 @@ int print_binary(va_list argms)
 	}
 	return (length);
 }
+
+int print_octal(va_list argms) {
+    unsigned int num = va_arg(argms, unsigned int);
+    int printed_chars = 0;
+
+    if (num == 0) {
+        _putchar('0');
+        printed_chars++;
+    } else {
+        char octal[32];
+        int i = 0;
+
+        while (num) {
+            octal[i] = '0' + (num & 7); 
+            i++;
+            num >>= 3; 
+        }
+
+        while (i > 0) {
+            i--;
+            _putchar(octal[i]);
+            printed_chars++;
+        }
+    }
+
+    return (printed_chars);
+}
