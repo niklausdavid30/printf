@@ -20,7 +20,7 @@ int print_char(va_list argms)
 int print_string(va_list argms)
 {
   int i;
-  char *s = va_arg(argms, char *)
+  const char *s = va_arg(argms, const char *)
   for (i = 0; s[i] != '\0'; i++)
       _putchar(s[i]);
   return (i);
