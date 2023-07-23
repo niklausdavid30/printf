@@ -6,7 +6,7 @@
 * Return: Number of chars printed
 */
 
-int print_number(va_list args)
+int print_number(va_list argms)
 {
 	int num;
 	int power;
@@ -14,7 +14,7 @@ int print_number(va_list args)
 	int len;
 
 
-	num  = va_arg(args, int);
+	num  = va_arg(argms, int);
 	power = 1;
 	len = 0;
 
