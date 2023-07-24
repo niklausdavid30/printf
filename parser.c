@@ -17,7 +17,7 @@ int parser (const char *format, FunctionList printFunctions, va_list argms)
 		{
 			int specifier_check = 0;
 
-			for (j = 0; j < 9; j++)
+			for (j = 0; j < 11; j++)
 			{
 				if (format[i+1] == printFunctions[j].specifier)
 				{
