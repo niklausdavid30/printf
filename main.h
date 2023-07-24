@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-/* Libraries */
+/* Standard Libraries */
 #include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
@@ -11,25 +11,35 @@
 
 /* Structures */
 /**
-* struct functions - print function structure.
+* struct functions - structure for print functions.
 * @specifier: Char indicating specifier to use.
-* @pf: Function that will handle the printing.
+* @pf: Corresponding print function.
 */
 
 typedef struct functions
 {
 	char specifier;
 	int (*pf)(va_list argms);
-} PrintFunction;
+} FunctionList;
 
-/* Main Function */
+/* Main Functions */
 int _printf(const char *format, ...);
-int parser(const char *format, PrintFunction printFunctions[], va_list argms);
+int parser(const char *format, FunctionList printFunctions[], va_list argms);
 int print_char(va_list argms);
+int print_string(va_list argms);
+int print_percent(va_list argms);
+int print_integer(va_list argms);
+int print_unsigned(va_list argms);
+int print_binary(va_list argms);
+int print_octal(va_list argms);
+int print_hexLower(va_list argms);
+int print_hexUpper(va_list argms);
 
 
-/* Help Functions */
+
+/* Helper Functions */
 int _putchar(char c);
-
+int print_number(va_list argms);
+int print_unsigned_number(unsigned int num);
 
 #endif /* MAIN_H */
