@@ -55,3 +55,27 @@ int print_reversed_string(va_list argms) {
 
     return printed_chars;
 }
+
+/**
+* print_rot13 - Prints the rot13'ed string
+* @argms: Variadic list of arguments
+*/
+
+int print_rot13(va_list args) {
+    const char *s = va_arg(args, const char *);
+    int printed_chars = 0;
+
+    while (*s) {
+        char c = *s;
+        if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z')) {
+            char base = (c >= 'a') ? 'a' : 'A';
+            _putchar((c - base + 13) % 26 + base);
+        } else {
+            _putchar(c);
+        }
+        s++;
+        printed_chars++;
+    }
+
+    return printed_chars;
+}
