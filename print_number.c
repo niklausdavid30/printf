@@ -3,6 +3,7 @@
 /**
 * print_integer - Prints integers
 * @argms: Variadic list of arguments
+* Return: Number of printed chars
 */
 
 int print_integer(va_list argms)

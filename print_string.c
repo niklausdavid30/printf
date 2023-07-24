@@ -3,6 +3,7 @@
 /**
 * print_char - Prints characters
 * @argms: Variadic list of arguments
+* Return: 1 (Success) or -1 if failure
 */
 
 int print_char(va_list argms)
@@ -15,6 +16,7 @@ int print_char(va_list argms)
 /**
 * print_string - Prints strings
 * @argms: Variadic list of arguments
+* Return: Number of printed chars or -1 if failure
 */
 
 int print_string(va_list argms)
@@ -27,19 +29,9 @@ int print_string(va_list argms)
 }
 
 /**
-* print_percent - Prints percent
-* @argms: Variadic list of arguments
-*/
-
-int print_percent(va_list argms)
-{
-	_putchar('%');
-	return (1);
-}
-
-/**
 * print_reversed_string - Prints reversed string
 * @argms: Variadic list of arguments
+* Return: Number of printed chars or -1 if failure
 */
 
 int print_reversed_string(va_list argms) {

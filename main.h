@@ -27,7 +27,7 @@ int _printf(const char *format, ...);
 int parser(const char *format, FunctionList printFunctions[], va_list argms);
 int print_char(va_list argms);
 int print_string(va_list argms);
-int print_percent(va_list argms);
+int print_reversed_string(va_list argms);
 int print_integer(va_list argms);
 int print_unsigned(va_list argms);
 int print_binary(va_list argms);
