@@ -61,8 +61,8 @@ int print_reversed_string(va_list argms) {
 * @argms: Variadic list of arguments
 */
 
-int print_rot13(va_list args) {
-    const char *s = va_arg(args, const char *);
+int print_rot13(va_list argms) {
+    const char *s = va_arg(argms, const char *);
     int printed_chars = 0;
 
     while (*s) {
