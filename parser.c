@@ -10,7 +10,6 @@
 int parser (const char *format, FunctionList printFunctions, va_list argms)
 {
 	int i = 0, j, length = 0;
-
 	while (format[i])
 	{
 		if (format[i] == '%' && format[i+1] != '%' && format[i] != '\0')
