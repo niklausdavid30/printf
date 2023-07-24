@@ -11,7 +11,6 @@ int print_integer(va_list argms)
 
 	n = print_number(argms);
 	return (n);
-
 }
 
 /**
@@ -65,7 +64,8 @@ int print_binary(va_list argms)
 * Return: Number of printed chars
 */
 
-int print_octal(va_list argms) {
+int print_octal(va_list argms)
+{
     unsigned int num = va_arg(argms, unsigned int);
     int printed_chars = 0;
 
