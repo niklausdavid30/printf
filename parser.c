@@ -31,7 +31,6 @@ int parser(const char *format, FunctionList printFunctions[], va_list argms)
 			if (!specifier_check)
 			{
 				length += _putchar('%');
-				length += _putchar(format[i + 1]);
 				i++;
 			}
 		}
