@@ -22,7 +22,7 @@ int parser(const char *format, FunctionList printFunctions[], va_list argms)
 				{
 					specifier_check = 1;
 					length += printFunctions[j].pf(argms);
-					j++;
+					i++;
 					break;
 				}
 			}
@@ -31,21 +31,19 @@ int parser(const char *format, FunctionList printFunctions[], va_list argms)
 				length += _putchar('%');
 				i++;
 			}
-			else if (format[i] == '%' && format[i + 1] == '%')
-			{
-				length += _putchar('%');
-				i++;
-			}
-			else if (format[0] == '%' && format[1] == '\0')
-			{
-				return (-1);
-			}
 		}
-		else
+		else if (format[i] == '%' && format[i + 1] == '%')
 		{
-			length += _putchar(format[i]);
+			length += _putchar('%');
 			i++;
 		}
+		else if (format[0] == '%' && format[1] == '\0')
+		{
+			return (-1);
+		}
+		else
+			length += _putchar(format[i]);
+		i++;
 	}
 	return (length);
 }
