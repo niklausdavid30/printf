@@ -1,27 +1,27 @@
-#include <main.h>
+#include "main.h"
 
 /**
-* parser - Goes through and prints format string
-* @printFunctions: Struct of type FunctionList of print functions
-* @argms: Variadic list of args
-* Return: Number of printed chars or -1 if failure
-*/
+ * parser - Goes through and prints format string
+ * @printFunctions: Struct of type FunctionList of print functions
+ * @argms: Variadic list of args
+ * Return: Number of printed chars or -1 if failure
+ */
 
-int parser (const char *format, FunctionList printFunctions, va_list argms)
+int parser(const char *format, FunctionList printFunctions[], va_list argms)
 {
 	int i = 0, j, length = 0;
 	while (format[i])
 	{
-		if (format[i] == '%' && format[i+1] != '%' && format[i] != '\0')
+		if (format[i] == '%' && format[i + 1] != '%' && format[i] != '\0')
 		{
 			int specifier_check = 0;
 
 			for (j = 0; j < 11; j++)
 			{
-				if (format[i+1] == printFunctions[j].specifier)
+				if (format[i + 1] == printFunctions[j].specifier)
 				{
 					specifier_check = 1;
-					length += printFunctions.pf(j);
+					length += printFunctions[j].pf(argms);
 					j++;
 					break;
 				}
@@ -31,7 +31,7 @@ int parser (const char *format, FunctionList printFunctions, va_list argms)
 				length += _putchar('%');
 				i++;
 			}
-			else if (format[i] == '%' && format[i+1] = '%')
+			else if (format[i] == '%' && format[i + 1] == '%')
 			{
 				length += _putchar('%');
 				i++;

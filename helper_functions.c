@@ -1,10 +1,10 @@
-# include <main.h>
+#include "main.h"
 
 /**
-* print_number - Prints signed and unsigned numbers
-* @args: Next num to print
-* Return: Number of chars printed
-*/
+ * print_number - Prints signed and unsigned numbers
+ * @args: Next num to print
+ * Return: Number of chars printed
+ */
 
 int print_number(va_list argms)
 {
@@ -13,8 +13,7 @@ int print_number(va_list argms)
 	unsigned int number;
 	int len;
 
-
-	num  = va_arg(argms, int);
+	num = va_arg(argms, int);
 	power = 1;
 	len = 0;
 
@@ -26,10 +25,10 @@ int print_number(va_list argms)
 	else
 		number = num;
 
-	for (; number / power > 9; )
+	for (; number / power > 9;)
 		power *= 10;
 
-	for (; power != 0; )
+	for (; power != 0;)
 	{
 		len += _putchar('0' + number / power);
 		number %= power;
@@ -40,10 +39,10 @@ int print_number(va_list argms)
 }
 
 /**
-* print_unsigned_number - Prints unsigned number
-* @num: Number to print
-* Return: Number of printed chars
-*/
+ * print_unsigned_number - Prints unsigned number
+ * @num: Number to print
+ * Return: Number of printed chars
+ */
 
 int print_unsigned_number(unsigned int num)
 {
@@ -56,10 +55,10 @@ int print_unsigned_number(unsigned int num)
 
 	number = num;
 
-	for (; number / power > 9; )
+	for (; number / power > 9;)
 		power *= 10;
 
-	for (; power != 0; )
+	for (; power != 0;)
 	{
 		length += _putchar('0' + number / power);
 		number %= power;
@@ -67,4 +66,17 @@ int print_unsigned_number(unsigned int num)
 	}
 
 	return (length);
+}
+
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }
