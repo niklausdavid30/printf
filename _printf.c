@@ -22,8 +22,7 @@ FunctionList printFunctions[] = {
 {'o', print_octal},
 {'x', print_hexLower},
 {'X', print_hexUpper},
-{'R', print_rot13},
-{'%', print_percent}
+{'R', print_rot13}
 };
 
 if (format == NULL)
