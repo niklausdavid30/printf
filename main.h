@@ -35,7 +35,6 @@ int print_octal(va_list argms);
 int print_hexLower(va_list argms);
 int print_hexUpper(va_list argms);
 int print_rot13(va_list argms);
-int print_spec_string(va_list argms);
 
 /* Helper Functions */
 int _putchar(char c);

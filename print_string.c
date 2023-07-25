@@ -41,7 +41,7 @@ return (i);
 int print_rot13(va_list argms)
 {
 const char *s = va_arg(argms, const char *);
-int printed_chars = 0;
+int printed_chars = 0, i;
 
 if (s == NULL)
 {
