@@ -12,16 +12,16 @@ int length;
 va_list argms;
 
 FunctionList printFunctions[] = {
-{'c', print_char}, 
-{'s', print_string}, 
-{'r', print_reversed_string}, 
-{'d', print_integer}, 
-{'i', print_integer}, 
-{'b', print_binary}, 
-{'u', print_unsigned}, 
-{'o', print_octal}, 
-{'x', print_hexLower}, 
-{'X', print_hexUpper}, 
+{'c', print_char},
+{'s', print_string},
+{'r', print_reversed_string},
+{'d', print_integer},
+{'i', print_integer},
+{'b', print_binary},
+{'u', print_unsigned},
+{'o', print_octal},
+{'x', print_hexLower},
+{'X', print_hexUpper},
 {'R', print_rot13}
 };
 
