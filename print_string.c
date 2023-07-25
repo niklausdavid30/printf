@@ -19,17 +19,27 @@ return (1);
 * Return: Number of printed chars or -1 if failure
 */
 
-int print_string(va_list argms)
+int printf_string(va_list argms)
 {
-int i;
-const char *s = va_arg(argms, const char *);
+	char *s;
+	int i, len;
 
-if (s == NULL)
-s = "(null)";
-
-for (i = 0; s[i] != '\0'; i++)
-_putchar(s[i]);
-return (i);
+	s = va_arg(argms, char *);
+	if (s == NULL)
+	{
+		s = "(null)";
+		len = _strlen(s);
+		for (i = 0; i < len; i++)
+			_putchar(s[i]);
+		return (len);
+	}
+	else
+	{
+		len = _strlen(s);
+		for (i = 0; i < len; i++)
+			_putchar(s[i]);
+		return (len);
+	}
 }
 
 /**
