@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * parser - Goes through and prints format string
- * @printFunctions: Struct of type FunctionList of print functions
- * @argms: Variadic list of args
- * Return: Number of printed chars or -1 if failure
- */
+* parser - Goes through and prints format string
+* @printFunctions: Struct of type FunctionList of print functions
+* @argms: Variadic list of args
+* Return: Number of printed chars or -1 if failure
+*/
 
 int parser(const char *format, FunctionList printFunctions[], va_list argms)
 {
