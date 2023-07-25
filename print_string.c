@@ -19,7 +19,7 @@ return (1);
 * Return: Number of printed chars or -1 if failure
 */
 
-int printf_string(va_list argms)
+int print_string(va_list argms)
 {
 	char *s;
 	int i, len;
