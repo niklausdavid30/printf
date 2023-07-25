@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * _printf - Custom "printf" function
- * @format: Given format string
- * Return: Number of printed chars or -1 if NULL
- */
+* _printf - Custom "printf" function
+* @format: Given format string
+* Return: Number of printed chars or -1 if NULL
+*/
 
 int _printf(const char *format, ...)
 {
