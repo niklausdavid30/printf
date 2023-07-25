@@ -2,7 +2,7 @@
 
 /**
 * print_number - Prints signed and unsigned numbers
-* @args: Next num to print
+* @argms: Next num to print
 * Return: Number of chars printed
 */
 
