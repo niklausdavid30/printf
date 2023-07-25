@@ -11,10 +11,10 @@
 
 /* Structures */
 /**
- * struct functions - structure for print functions.
- * @specifier: Char indicating specifier to use.
- * @pf: Corresponding print function.
- */
+* struct functions - structure for print functions.
+* @specifier: Char indicating specifier to use.
+* @pf: Corresponding print function.
+*/
 
 typedef struct functions
 {
@@ -40,5 +40,6 @@ int print_rot13(va_list argms);
 int _putchar(char c);
 int print_number(va_list argms);
 int print_unsigned_number(unsigned int num);
+int _strlen(char *str);
 
 #endif /* MAIN_H */

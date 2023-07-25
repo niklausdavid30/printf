@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_number - Prints signed and unsigned numbers
- * @args: Next num to print
- * Return: Number of chars printed
- */
+* print_number - Prints signed and unsigned numbers
+* @args: Next num to print
+* Return: Number of chars printed
+*/
 
 int print_number(va_list argms)
 {
@@ -39,10 +39,10 @@ int print_number(va_list argms)
 }
 
 /**
- * print_unsigned_number - Prints unsigned number
- * @num: Number to print
- * Return: Number of printed chars
- */
+* print_unsigned_number - Prints unsigned number
+* @num: Number to print
+* Return: Number of printed chars
+*/
 
 int print_unsigned_number(unsigned int num)
 {
@@ -69,14 +69,29 @@ int print_unsigned_number(unsigned int num)
 }
 
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
+* _putchar - writes the character c to stdout
+* @c: The character to print
+*
+* Return: On success 1.
+* On error, -1 is returned, and errno is set appropriately.
+*/
 
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
+}
+
+/**
+* _strlen - Calculate the length of a string
+* @str: Pointer to string
+* Return: The length of the string
+*/
+
+int _strlen(char *str)
+{
+	int len;
+
+	for (len = 0; str[len]; len++)
+		;
+	return (len);
 }
