@@ -23,14 +23,13 @@ int print_spec_string(va_list argms)
 			op = str[i];
 			sum += 2;
 
-			// Print binary value
 			for (int j = 7; j >= 0; j--)
 			{
 				_putchar('0' + ((op >> j) & 1));
 			}
 
-			// Print hexadecimal value
 			char hex_digits[] = "0123456789abcdef";
+
 			for (int j = 1; j >= 0; j--)
 			{
 				_putchar(hex_digits[(op >> (j * 4)) & 0xF]);
