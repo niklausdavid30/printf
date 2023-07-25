@@ -110,6 +110,7 @@ int print_hexLower(va_list argms)
 	unsigned int number = va_arg(argms, unsigned int);
 	char buffer[32];
 	int index = 0, digits = 0, i, remainder;
+
 	if (number == 0)
 		return (_putchar('0'));
 	while (number > 0)
@@ -128,31 +129,3 @@ int print_hexLower(va_list argms)
 	return (digits);
 }
 
-/**
-* print_hexUpper - Prints hexadecimal in Uppercase of unsigned num
-* @argms: Variadic list of arguments
-* Return: Number of printed chars
-*/
-
-int print_hexUpper(va_list argms)
-{
-	unsigned int number = va_arg(argms, unsigned int);
-	char buffer[32];
-	int index = 0, digits = 0, i, remainder;
-	if (number == 0)
-		return (_putchar('0'));
-	while (number > 0)
-	{
-		remainder = number % 16;
-		if (remainder < 10)
-			buffer[index] = '0' + remainder;
-		else
-			buffer[index] = 'A' + (remainder - 10);
-		number /= 16;
-		index++;
-		digits++;
-	}
-	for (i = index - 1; i >= 0; i--)
-		_putchar(buffer[i]);
-	return (digits);
-}
