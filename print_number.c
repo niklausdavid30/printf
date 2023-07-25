@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_integer - Prints integers
- * @argms: Variadic list of arguments
- * Return: Number of printed chars
- */
+* print_integer - Prints integers
+* @argms: Variadic list of arguments
+* Return: Number of printed chars
+*/
 
 int print_integer(va_list argms)
 {
@@ -15,10 +15,10 @@ int print_integer(va_list argms)
 }
 
 /**
- * print_unsigned - Prints unsigned integers
- * @argms: Variadic list of arguments
- * Return: Number of printed chars
- */
+* print_unsigned - Prints unsigned integers
+* @argms: Variadic list of arguments
+* Return: Number of printed chars
+*/
 
 int print_unsigned(va_list argms)
 {
@@ -30,10 +30,10 @@ int print_unsigned(va_list argms)
 }
 
 /**
- * print_binary - Prints binary of unsigned num
- * @argms: Variadic list of arguments
- * Return: Number of printed chars
- */
+* print_binary - Prints binary of unsigned num
+* @argms: Variadic list of arguments
+* Return: Number of printed chars
+*/
 
 int print_binary(va_list argms)
 {
@@ -61,10 +61,10 @@ int print_binary(va_list argms)
 }
 
 /**
- * print_octal - Prints octal of unsigned num
- * @argms: Variadic list of arguments
- * Return: Number of printed chars
- */
+* print_octal - Prints octal of unsigned num
+* @argms: Variadic list of arguments
+* Return: Number of printed chars
+*/
 
 int print_octal(va_list argms)
 {
@@ -100,10 +100,10 @@ int print_octal(va_list argms)
 }
 
 /**
- * print_hexLower - Prints hexadecimal in Lowercase of unsigned num
- * @argms: Variadic list of arguments
- * Return: Number of printed chars
- */
+* print_hexLower - Prints hexadecimal in Lowercase of unsigned num
+* @argms: Variadic list of arguments
+* Return: Number of printed chars
+*/
 
 int print_hexLower(va_list argms)
 {
@@ -129,10 +129,10 @@ int print_hexLower(va_list argms)
 }
 
 /**
- * print_hexUpper - Prints hexadecimal in Uppercase of unsigned num
- * @argms: Variadic list of arguments
- * Return: Number of printed chars
- */
+* print_hexUpper - Prints hexadecimal in Uppercase of unsigned num
+* @argms: Variadic list of arguments
+* Return: Number of printed chars
+*/
 
 int print_hexUpper(va_list argms)
 {
