@@ -29,21 +29,29 @@ int print_string(va_list argms)
 }
 
 /**
-* print_reversed_string - Prints reversed string
-* @argms: Variadic list of arguments
-* Return: Number of printed chars or -1 if failure
+* print_reversed_string - Prints a string in reverse.
+* @argms: String to print
+* Return: The number of chars printed or -1 if failure
 */
 
-int print_reversed_string(va_list argms) {
-    const char *s = va_arg(argms, const char *);
-    int length = strlen(s);
-    int printed_chars = 0;
+int print_reversed_string(va_list argms)
+{
+	int length, i;
+	char *str = va_arg(argms, char *);
 
-    // Print the string in reverse order
-    for (int i = length - 1; i >= 0; i--) {
-        _putchar(s[i]);
-        printed_chars++;
-    }
+	if (str == NULL)
+	{
+		str = "(null)";
 
-    return printed_chars;
+		for (i = 0; str[i]; i++)
+			_putchar(str[i]);
+		return (i);
+	}
+
+	length = _strlen(str);
+
+	for (i = length - 1; i >= 0; i--)
+		_putchar(str[i]);
+
+	return (length);
 }
