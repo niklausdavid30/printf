@@ -23,6 +23,16 @@ int print_string(va_list argms)
 {
 int i;
 const char *s = va_arg(argms, const char *);
+
+if (s == NULL)
+{
+s = "(null)";
+
+for (i = 0; s[i]; i++)
+_putchar(s[i]);
+return (i);
+}
+
 for (i = 0; s[i] != '\0'; i++)
 _putchar(s[i]);
 return (i);
@@ -38,6 +48,15 @@ int print_rot13(va_list argms)
 {
 const char *s = va_arg(argms, const char *);
 int printed_chars = 0;
+
+if (s == NULL)
+{
+s = "(null)";
+
+for (i = 0; s[i]; i++)
+_putchar(s[i]);
+return (i);
+}
 
 while (*s)
 {
