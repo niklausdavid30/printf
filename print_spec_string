@@ -1,0 +1,47 @@
+#include "main.h"
+
+/**
+ * print_spec_string - prints a string and values of
+ * non-printed chars
+ * @argms: input string
+ * Return: number of chars printed
+ */
+
+int print_spec_string(va_list argms)
+{
+	unsigned char *str;
+	unsigned int i, sum = 0, op;
+
+	str = va_arg(argms, unsigned char *);
+
+	for (i = 0; str[i]; i++)
+	{
+		if (str[i] < 32 || str[i] >= 127)
+		{
+			_putchar('\\');
+			_putchar('x');
+			op = str[i];
+			sum += 2;
+
+			for (int j = 7; j >= 0; j--)
+			{
+				_putchar('0' + ((op >> j) & 1));
+			}
+
+			char hex_digits[] = "0123456789abcdef";
+
+			for (int j = 1; j >= 0; j--)
+			{
+				_putchar(hex_digits[(op >> (j * 4)) & 0xF]);
+			}
+
+			sum += 2;
+		}
+		else
+		{
+			_putchar(str[i]);
+		}
+	}
+
+	return (i + sum);
+}

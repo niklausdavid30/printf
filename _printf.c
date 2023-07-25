@@ -23,7 +23,7 @@ FunctionList printFunctions[] = {
 {'x', print_hexLower},
 {'X', print_hexUpper},
 {'R', print_rot13},
-{'%', print_percent}
+{'S', print_spec_string}
 };
 
 if (format == NULL)
