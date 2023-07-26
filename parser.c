@@ -14,7 +14,7 @@ int parser(const char *format, FunctionList printFunctions[], va_list argms)
 
 	while (format[i])
 	{
-		if (format[i] == '%' && format[i + 1] != '%' && format[i] != '\0')
+		if (format[i] == '%' && format[i + 1] != '%' && format[i + 1] != '\0')
 		{
 			int specifier_check = 0;
 
