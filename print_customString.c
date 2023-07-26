@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * printf_exclusive_string - print exclusuives string.
+ * print_custom_string - print custom string.
  * @argms: argument.
  * Return: the length of the string.
  */
