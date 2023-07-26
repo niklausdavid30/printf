@@ -35,5 +35,5 @@ int print_custom_string(va_list argms)
 		}
 	}
 
-	return length;
+	return (length);
 }
