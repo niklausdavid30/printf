@@ -9,8 +9,7 @@
 int print_char(va_list argms)
 {
 char value = va_arg(argms, int);
-_putchar(value);
-return (1);
+return (_putchar(value););
 }
 
 /**
