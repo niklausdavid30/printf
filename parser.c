@@ -29,17 +29,14 @@ int parser(const char *format, FunctionList printFunctions[], va_list argms)
 				}
 			}
 			if (!specifier_check)
-			{
 				length += _putchar('%');
-				i++;
-			}
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 		{
 			length += _putchar('%');
 			i++;
 		}
-		else if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+		else if (format[0] == '%' && format[1] == '\0')
 		{
 			return (-1);
 		}
