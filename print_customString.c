@@ -1,39 +1,40 @@
 #include "main.h"
 
 /**
- * print_custom_string - Custom function
- * to print strings with special formatting
- * @argms: Variadic list of arguments
- * Return: Number of printed chars
+ * printf_exclusive_string - print exclusuives string.
+ * @argms: argument.
+ * Return: the length of the string.
  */
 
 int print_custom_string(va_list argms)
 {
-	int length = 0;
-	char *str = va_arg(argms, char*);
-	char *hex_rep;
+	char *s;
+	int i, len = 0;
+	int cast;
 
-	if (str == NULL)
+	s = va_arg(argms, char *);
+	if (s == NULL)
+		s = "(null)";
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		length += write(1, "(null)", 6);
-	}
-	else
-	{
-		for (; *str; str++)
+		if (s[i] < 32 || s[i] >= 127)
 		{
-			if ((*str > 0 && *str < 32) || *str >= 127)
+			_putchar('\\');
+			_putchar('x');
+			len = len + 2;
+			cast = s[i];
+			if (cast < 16)
 			{
-				length += write(1, "\\x", 2);
-				hex_rep = "0123456789ABCDEF";
-				length += write(1, &hex_rep[(*str >> 4) & 0x0F], 1);
-				length += write(1, &hex_rep[*str & 0x0F], 1);
+				_putchar('0');
+				len++;
 			}
-			else
-			{
-				length += write(1, str, 1);
-			}
+			len = len + printf_HEX_aux(cast);
+		}
+		else
+		{
+			_putchar(s[i]);
+			len++;
 		}
 	}
-
-	return (length);
+	return (len);
 }
