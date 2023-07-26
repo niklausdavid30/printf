@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_custom_string - Custom function 
+ * print_custom_string - Custom function
  * to print strings with special formatting
  * @argms: Variadic list of arguments
  * Return: Number of printed chars
