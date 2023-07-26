@@ -29,7 +29,7 @@ int print_string(va_list argms)
 	len = _strlen(s);
 	for (i = 0; i < len; i++)
 		_putchar(s[i]);
-	return (len);
+	return (i);
 }
 
 /**
