@@ -32,5 +32,6 @@ int printf_HEX_aux(unsigned int num)
 		_putchar(array[i] + '0');
 	}
 	free(array);
+
 	return (counter);
 }
