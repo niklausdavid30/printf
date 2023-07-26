@@ -36,7 +36,7 @@ int parser(const char *format, FunctionList printFunctions[], va_list argms)
 			length += _putchar('%');
 			i++;
 		}
-		else if (format[0] == '%' && format[1] == '\0')
+		else if ((format[0] == '%' && format[1] == '\0') || (format[i] == '%' && format [i + 1] == '\0'))
 		{
 			return (-1);
 		}
